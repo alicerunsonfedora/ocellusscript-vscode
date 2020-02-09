@@ -1,0 +1,58 @@
+{
+    "Map": {
+        "prefix": "mapf",
+        "body": "map $0 ${1:list}",
+        "description": "Map: Return a list with a given function applied to it."
+    },
+    "Filter": {
+        "prefix": "filterf",
+        "body": "filter $0 ${1:list}",
+        "description": "Filter: Return a list of items that meet a certain criteria."
+    },
+    "Reduce": {
+        "prefix": "reducef",
+        "body": "reduce $1 ${2:list} $0",
+        "description": "Reduce: Return a single value from a list with a given function applied to combine values with a starting value."
+    },
+    "For": {
+        "prefix": "forf",
+        "body": [
+            "for ${1:0} ${2:10} ${3:task} where",
+            "\t${3:task} ${4:i} = $0"
+        ],
+        "description": "For: Iterate over a certain range and perform a task."
+    },
+    "Lambda": {
+        "prefix": "lmbd",
+        "body": "(lambda ${1:x} -> $0)",
+        "description": "Lambda: Write an in-line expression."
+    },
+    "If": {
+        "prefix": "ifcond",
+        "body": [
+            "${1:expr}$0",
+            "\t? ${2:true}",
+            "\t: ${3:false}"
+        ],
+        "description": "If: Evaluate an expression a certain way based on the result of another expression."
+    },
+    "Error Handling": {
+        "prefix": "errhand",
+        "body": [
+            "${1:optexpr}$0",
+            "\t! ${2:tryexpre}",
+            "\t: ${3:catchexpr}"
+        ],
+        "description": "Error Handling: Evaluate an expression that may return an Error and do the alternate action if in error."
+    },
+    "Module Name": {
+        "prefix": "mname",
+        "body": "module ${1:ModuleName} where $0",
+        "description": "Module Name: Define this file as an OcellusScript module with a module name."
+    },
+    "Datatype": {
+        "prefix": "dtype",
+        "body": "datatype ${1:customtype} = ${0}",
+        "description": "Datatype: Define a custom datatype."
+    }
+}

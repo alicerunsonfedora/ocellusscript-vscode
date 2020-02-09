@@ -1,8 +1,11 @@
 {
     "name": "ocellusscript-lang",
-    "displayName": "OcellusScript-Language",
+    "displayName": "OcellusScript",
     "description": "Language support for OcellusScript, a Haskell-inspired functional programming language",
-    "version": "0.0.1",
+    "icon": "icon.png",
+    "publisher": "marquiskurt",
+    "license": "LICENSE.txt",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.41.0"
     },
@@ -13,13 +16,23 @@
         "languages": [{
             "id": "ocellusscript",
             "aliases": ["OcellusScript", "ocellusscript"],
-            "extensions": ["ocls"],
+            "extensions": [".ocls"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "ocellusscript",
             "scopeName": "source.ocellusscript",
             "path": "./syntaxes/ocellusscript.tmLanguage.json"
-        }]
-    }
+        }],
+        "snippets": [
+            {
+                "language": "ocellusscript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/alicerunsonfedora/ocellusscript-lang.git"
+	}
 }
