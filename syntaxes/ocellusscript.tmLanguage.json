@@ -13,6 +13,9 @@
 		},
 		{
 			"include": "#numbers"
+		},
+		{
+			"include": "#entities"
 		}
 	],
 	"repository": {
@@ -20,7 +23,7 @@
 			"patterns": [
 				{
 					"name": "storage.type.ocellusscript",
-					"match": "\\b(Character|String|Integer|Boolean|Float|Callable|Anything|Nothing|Error)\\b"
+					"match": "\\b(Character|String|Integer|Boolean|Float|Callable|Error)\\b"
 				},
 				{
 					"name": "storage.modifier.ocelluscript",
@@ -28,11 +31,11 @@
 				},
 				{
 					"name": "keyword.control.ocellusscript",
-					"match": "\\b(import|module|where|takes|returns|log|only|except|warn|type|datatype|lambda)\\b"
+					"match": "\\b(import|module|where|takes|returns|log|only|except|warn|type|datatype|lambda|and|or|not)\\b"
 				},
 				{
 					"name": "constant.language.ocelluscript",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(true|false|Anything|Nothing)\\b"
 				},
 				{
 					"name": "keyword.operator.comparison.ocellusscript",
@@ -78,6 +81,14 @@
 				{
 					"match": "\\b([1-9]+[0-9]*|0)",
 					"name": "constant.numeric.integer.decimal.ocellusscript"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "storage.modifier.ocellusscript",
+					"match": "\\b(private)\\b"
 				}
 			]
 		}
